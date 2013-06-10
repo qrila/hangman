@@ -1,0 +1,12 @@
+<% @words.each do |x| %>
+	<%= x.word %>
+	<br />
+<% end %>
+<br />
+
+<%= text_field_tag 'new_word', nil, :placeholder => 'Kirjoita uusi sana', :size => 15, maxlength => 15 %>
+<br />
+
+<%= link_to (root_path) do %>
+	<div class="back"><p>Takaisin</p></div>
+<% end %>
