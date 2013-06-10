@@ -7,19 +7,16 @@
   background-color: #8C919C;
   margin: 1px;
   border-radius: 4px;
-  position: relative;
+  display: inline-block;
 }
 
 .div2 {
   width: 100px;
   height: 100px;
   background-color: #FA9DA4;
-  
-  position: relative;
-  left: 102px;
-  top: -101px;
   margin: 1px;
   border-radius: 4px;
+  display: inline-block;
 }
 a {
   text-decoration: none;
