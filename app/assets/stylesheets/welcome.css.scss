@@ -1,3 +1,31 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.div1 {
+  width: 100px;
+  height: 100px;
+  background-color: #8C919C;
+  margin: 1px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.div2 {
+  width: 100px;
+  height: 100px;
+  background-color: #FA9DA4;
+  
+  position: relative;
+  left: 102px;
+  top: -101px;
+  margin: 1px;
+  border-radius: 4px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}

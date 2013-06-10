@@ -1,4 +1,6 @@
 Hangman::Application.routes.draw do
+  get "game/index"
+
   get "welcome/index"
 
   # The priority is based upon order of creation:
