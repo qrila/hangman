@@ -1,1 +1,9 @@
-<div class="picture"><div>
+
+<div class="picture">
+	<%= image_tag("hangman1.png") %>
+</div>
+<div class="manyletters">
+<% "ABCDEFGHIJKLMNOPRSTUVYÄÖ".each_char do |i| %>
+	<div class="letter"><p><%= i %></p></div>
+<% end %>
+</div>
