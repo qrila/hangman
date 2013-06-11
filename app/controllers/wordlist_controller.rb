@@ -8,6 +8,9 @@ class WordlistController < ApplicationController
   
   def add_word
 		new_word = params[:new_word].downcase
+		new_word.gsub!('Ä', 'ä')
+		new_word.gsub!('Ö', 'ö')
+		new_word.gsub!('Å', 'å')
 		addword = Word.new(:word => new_word, :language => 'fi')
 	
 		respond_to do |format|

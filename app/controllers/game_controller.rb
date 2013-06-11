@@ -16,6 +16,7 @@ class GameController < ApplicationController
 
 		word_to_guess.gsub!('ä', 'Ä')
 		word_to_guess.gsub!('ö', 'Ö')
+		word_to_guess.gsub!('å', 'Å')
   	
   	session[:gameword] = word_to_guess
   	return word_to_guess
