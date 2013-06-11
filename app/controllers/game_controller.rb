@@ -11,8 +11,12 @@ class GameController < ApplicationController
   end
   
   def draw_word
-  	ran_num = Random.rand(Word.count)
-  	word_to_guess = Word.find(ran_num).word
+		word_to_guess = Word.offset(rand(Word.count)).first.word
+  	word_to_guess.upcase!
+
+		word_to_guess.gsub!('ä', 'Ä')
+		word_to_guess.gsub!('ö', 'Ö')
+  	
   	session[:gameword] = word_to_guess
   	return word_to_guess
   end
