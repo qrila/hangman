@@ -1,12 +1,17 @@
 
 <div class="picture" style="background-image: url(<%= asset_path @pic %>)" >
-	<%= @word_to_gues %>
+	<%= @word_to_guess %>
 </div>
 <div class="manyletters">
 <% "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".each_char do |i| %>
 	<div class="letter"><p><%= i %></p></div>
 <% end %>
 </div>
-<%= link_to (root_path) do %>
-	<div class="back"><p>Takaisin</p></div>
+
+<%= link_to endgame_path do %>
+	<div class="back"><p>Lopeta</p></div>
+<% end %>
+
+<%= link_to newgame_path do %>
+	<div class="back"><p>Uusi peli</p></div>
 <% end %>
