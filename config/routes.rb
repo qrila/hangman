@@ -5,8 +5,10 @@ Hangman::Application.routes.draw do
 
   get "welcome/index"
   
-  match "/game" => "game#index"
-  match "/words" => "wordlist#index"
+  match "game" => "game#index"
+  match "words" => "wordlist#index"
+  match "addnewword" => "wordlist#add_word"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
