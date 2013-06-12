@@ -10,6 +10,7 @@ Hangman::Application.routes.draw do
   match "addnewword" => "wordlist#add_word"
   match "newgame" => "game#start_new_game"
   match "endgame" => "game#go_back"
+  match "game/checkletter/" => "game#checkletter"
   
 
   # The priority is based upon order of creation:

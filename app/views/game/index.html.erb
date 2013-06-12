@@ -4,7 +4,24 @@
 </div>
 <div class="manyletters">
 <% "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".each_char do |i| %>
-	<div class="letter"><p><%= i %></p></div>
+
+	<% if (i == 'Ä') %>
+		<%= link_to game_checkletter_path(:id => 'AE') do %>
+			<div class="letter"><p><%= i %></p></div>
+		<% end %>
+	<% elsif (i == 'Ö') %>
+		<%= link_to game_checkletter_path(:id => 'OE') do %>
+			<div class="letter"><p><%= i %></p></div>
+		<% end %>
+	<% elsif (i == 'Å') %>
+		<%= link_to game_checkletter_path(:id => 'AO') do %>
+			<div class="letter"><p><%= i %></p></div>
+		<% end %>
+	<% else %>
+		<%= link_to game_checkletter_path(:id => i) do %>
+			<div class="letter"><p><%= i %></p></div>
+		<% end %>
+	<% end %>
 <% end %>
 </div>
 

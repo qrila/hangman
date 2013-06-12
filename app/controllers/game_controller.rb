@@ -2,11 +2,19 @@
 class GameController < ApplicationController
   def index
   	if (session[:gameword]) != nil
-  		@pic = 'hangman2.png'
+  	  
+  	  if session[:gamestate] < 10
+  	    session[:gamestate] += 1
+  	  end
+  	  
+  		@pic = session[:gamestate].to_s + 'hangman.png'
   		@word_to_guess = session[:gameword]
+  		
   	else
-  		@pic = 'hangman1.png'
+  	  session[:gamestate] = 1
+  		@pic = 1.to_s + 'hangman.png'
   		@word_to_guess = draw_word
+  		
   	end
   end
   
@@ -22,18 +30,21 @@ class GameController < ApplicationController
   	return word_to_guess
   end
   
-  def check_letter
+  def checkletter
+    redirect_to game_path
   end
   
   def change_picture
   end
   
   def start_new_game
+    session[:gamestate] = nil
   	session[:gameword] = nil
   	redirect_to game_path
   end
   
   def go_back
+    session[:gamestate] = nil
   	session[:gameword] = nil
   	redirect_to root_path
   end
