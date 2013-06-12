@@ -1,6 +1,16 @@
 
 <div class="picture" style="background-image: url(<%= asset_path @pic %>)" >
 	<%= @word_to_guess %>
+	
+	<div class="gameword">
+		<table>
+		<tr>	
+		<% @word_to_guess.each_char do |c| %>
+			<td class="gameletter" ><p><%= c %></p></td>
+		<% end %>
+		</tr>
+		</table>
+	</div>
 </div>
 <div class="manyletters">
 <% "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".each_char do |i| %>

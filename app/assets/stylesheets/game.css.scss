@@ -38,3 +38,39 @@ div p {
 	text-align: center;
 	margin-top: 6px;
 }
+
+.gameword {
+	position: relative;
+	top: 370px;
+	
+	/* Taken from w3schools.com to center game word */
+	/* Safari, Chrome, and Opera */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+}
+
+.gameletter {
+	font-size: 40px;
+	
+}
+
+td {
+	width: 40px;
+	text-align: center;
+}
+
+td p {
+	border-bottom-style: solid;
+	border-radius: 3px;
+}
