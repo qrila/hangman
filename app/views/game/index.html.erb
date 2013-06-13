@@ -1,24 +1,47 @@
 
 <div class="picture" style="background-image: url(<%= asset_path @pic %>)" >
-	<%= @word_to_guess %>
-	
-	<div class="gameword">
-		<table>
-		<tr>	
-		<% @word_to_guess.each_char do |c| %>
-			<% if (@guessed != '' && @guessed.index(c) != nil) %>
-				<td class="gameletter" ><p><%= c %></p></td>
-			<% else %>
-				<td class="gameletter"><p></p></td>
-			<% end %>
+	<div class="info_area">
+		<% if @guessed =='' %>
+		<td><p> Arvaa sana valitsemalla kirjaimia. Käytössä on yhdeksän arvauskertaa </p></td>
+		<% else %>
+		<td><p></p></td>
 		<% end %>
-		</tr>
-		</table>
 	</div>
+	<table class="background_table"
+		<tr >
+			
+		</tr>
+		<tr class="result_area">
+			<td class="result_column">
+				<% if @gamelose == 1 %>
+					<div class="lose"><br/>Yritykset loppuivat<br/>hävisit pelin<br/><br/></div>
+				<% elsif @gamewin == 1 %>
+					<div class="winwin"><br/>Löysit oikean sanan<br/>voitit pelin<br/><br/></div>
+				<% end %>
+			</td>
+		</tr>
+		<tr class="gameword_area">
+			<td>
+				<div class="gameword">
+					<table class="gameword_table">
+						<tr>	
+							<% @word_to_guess.each_char do |c| %>
+								<% if (@guessed != '' && @guessed.index(c) != nil) %>
+									<td class="gameletter" ><div><p><%= c %></p></td>
+								<% else %>
+									<td class="gameletter"><p></p></td>
+								<% end %>
+							<% end %>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
 </div>
 <div class="manyletters">
 <% "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".each_char do |i| %>
-	<% if (@guessed != '' && @guessed.index(i) != nil) %>
+	<% if (@guessed != '' && @guessed.index(i) != nil || (@gamelose == 1 || @gamewin == 1)) %>
 		<div class="usedletter"><p><%= i %></p></div>
 	<% else %>
 		<% if (i == 'Ä') %>

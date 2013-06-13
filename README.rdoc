@@ -1,5 +1,7 @@
 My own implementation of hangman game. 
 Game is run on Apache / Phusion Passenger / Ruby on Rails combo. 
 
+Game is played in finnish language.
+
 Kalle.
 kalle.kuurila@gmail.com

@@ -6,7 +6,7 @@
 <br />
 
 <%= form_tag addnewword_path do %> 
-	<%= text_field_tag :new_word, nil, :size => 18, :maxlength => 15 %>
+	<%= text_field_tag :new_word, nil, :size => 20, :maxlength => 15, :accept => 'text/html', :placeholder => 'Kirjoita lisättävä sana' %>
 	<br />
 	<%= submit_tag 'Lisää sana' %>
 	<br />
