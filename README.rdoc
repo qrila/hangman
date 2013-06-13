@@ -1,7 +1,13 @@
 My own implementation of hangman game. 
-Game is run on Apache / Phusion Passenger / Ruby on Rails combo. 
+Game is run on Ruby on Rails. 
 
 Game is played in finnish language.
+
+
+At this poin this is not working with Safari.
+
+
+
 
 Kalle.
 kalle.kuurila@gmail.com
