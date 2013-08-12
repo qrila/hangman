@@ -1,6 +1,16 @@
 <ol>
 <% @words.each do |x| %>
-	<li><%= x.word.capitalize %></li>
+	<li>
+	<% case x.word[0]
+	when 'ä'
+		x.word[0] = 'Ä'
+	when 'ö'
+		x.word[0] = 'Ö'
+	when 'å'
+		x.word[0] = 'Å'
+	end %>
+	<%= x.word.capitalize %>
+	</li>
 <% end %>
 </ol>
 <br />
