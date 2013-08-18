@@ -7,6 +7,7 @@ class WordlistController < ApplicationController
   end
   
   def add_word
+	if params[:new_word] != ''
 		new_word = params[:new_word].downcase
 		new_word.gsub!('Ä', 'ä')
 		new_word.gsub!('Ö', 'ö')
@@ -20,6 +21,10 @@ class WordlistController < ApplicationController
 				format.html { redirect_to words_path, notice: 'Sana löytyi jo tai jotain meni vikaan' }
 			end
 		end
-  end
-	
+	else
+		respond_to do |format|
+			format.html { redirect_to words_path, notice: 'Tyhjä ei kelpaa' }
+		end
+	  end
+	end
 end
