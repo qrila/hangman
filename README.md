@@ -3,11 +3,9 @@ Game is run on Ruby on Rails.
 
 Game is played in finnish language.
 
-
-At this poin this is not working with Safari.
-
-
+Game requires that cookies are enabled. As the play word is stored there.
 
 
 Kalle.
+
 kalle.kuurila@gmail.com
